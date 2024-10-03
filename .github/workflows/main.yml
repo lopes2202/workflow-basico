@@ -16,6 +16,7 @@ jobs:
   Primeiro-fluxo:
 # este é o nome do fluxo de trabalho
     name: Job 1
+    needs: Terceiro-fluxo
   # para ser executado nesta maquina virtual (container linux)
     runs-on: ubuntu-latest
   # agora irei incluir os passos do script
@@ -29,6 +30,7 @@ jobs:
   Segundo-fluxo:
 # este é o nome do fluxo de trabalho
     name: Job 2
+    needs: Primeiro-fluxo
   # para ser executado nesta maquina virtual (container linux)
     runs-on: ubuntu-latest
   # agora irei incluir os passos do script
